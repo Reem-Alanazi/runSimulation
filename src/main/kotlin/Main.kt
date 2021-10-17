@@ -10,11 +10,15 @@ fun main() {
 }
 runSimulation("Reem",greetingFunction)
 
+
 }
 
-fun runSimulation (playerName : String,
+
+inline fun runSimulation (playerName : String,
                    greetingFunction : (String,Int) -> String){
     val numBuildings = Random.nextInt(1..3)
     println(greetingFunction(playerName,numBuildings))
 
 }
+
+
