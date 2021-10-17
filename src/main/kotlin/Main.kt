@@ -8,8 +8,9 @@ fun main() {
         "Welcome to SimVillage, $playerName! (copyright $currentYear)"
 
 }
-runSimulation("Reem",greetingFunction)
-
+    //Calling Fun
+    runSimulation("Reem",greetingFunction)
+    printConstructionCost(6)
 
 }
 
@@ -19,6 +20,11 @@ inline fun runSimulation (playerName : String,
     val numBuildings = Random.nextInt(1..3)
     println(greetingFunction(playerName,numBuildings))
 
+}
+
+fun printConstructionCost(numBuildings: Int) {
+    val cost = 500
+    println("construction cost: ${cost * numBuildings}")
 }
 
 
