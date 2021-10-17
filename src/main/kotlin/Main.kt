@@ -8,16 +8,18 @@ fun main() {
         "Welcome to SimVillage, $playerName! (copyright $currentYear)"
 
 }
-    //Calling Fun
-    runSimulation("Reem",greetingFunction)
+    //Calling Fun                 // return nothing so I use double colon
+    runSimulation("Reem",::printConstructionCost,greetingFunction)
     printConstructionCost(6)
 
 }
 
 
 inline fun runSimulation (playerName : String,
+                       costPrinter :(Int) -> Unit,
                    greetingFunction : (String,Int) -> String){
     val numBuildings = Random.nextInt(1..3)
+    costPrinter(numBuildings)
     println(greetingFunction(playerName,numBuildings))
 
 }
